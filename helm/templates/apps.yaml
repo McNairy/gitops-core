@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     path: helm
-    repoURL: git://github.com/McNairy/gitops-monitoring.git
+    repoURL: git@github.com/McNairy/gitops-monitoring.git
     targetRevision: HEAD
   destination:
     namespace: production
