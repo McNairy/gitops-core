@@ -8,15 +8,13 @@ metadata:
 spec:
   project: default
   source:
-    path: helm
-    repoURL: https://github.com/McNairy/gitops-monitoring-grafana.git
+    path: manifests
+    repoURL: git@github.com/McNairy/gitops-monitoring-grafana.git
     targetRevision: HEAD
     helm:
       values: |
         image:
           tag: latest
-        ingress:
-          host: grafana.mcnairy-manor.home
       version: v3
   destination:
     namespace: production
