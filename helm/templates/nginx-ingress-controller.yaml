@@ -13,7 +13,7 @@ spec:
   source:
     path: nginx-ingress-controller
     repoUrl: 'https://charts.bitnami.com/bitnami'
-    targetRevision: HEAD
+    targetRevision: 9.3.18
     chart: nginx-ingress-controller
   syncPolicy:
     automated:
