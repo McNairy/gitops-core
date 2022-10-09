@@ -19,8 +19,8 @@ spec:
     targetRevision: 15.15.0
     helm:
       fileParameters:
-      - config
-        files/prometheus-values.yaml
+      - name: config
+        path: files/prometheus-values.yaml
   syncPolicy: 
     automated: 
       prune: true
