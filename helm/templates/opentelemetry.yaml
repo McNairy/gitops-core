@@ -13,10 +13,10 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: default
   source:
-    chart: open-telemetry
+    chart: opentelemetry-collector
     path: ''
     repoURL: 'https://open-telemetry.github.io/opentelemetry-helm-charts'
-    targetRevision: 0.6.0
+    targetRevision: 0.35.0
   syncPolicy: 
     automated: 
       prune: true
