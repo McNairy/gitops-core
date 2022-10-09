@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-ingress
+  finalizers:
+    - resources-finalizers.argocd.proj.io
+spec:
+  destination:
+    name: ''
+    namespace: nginx-ingress
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: ''
+    repoUrl: 'https://charts.bitnami.com/bitnami'
+    targetRevision: 9.3.18
+    chart: nginx-ingress-controller
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
