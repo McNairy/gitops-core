@@ -4,15 +4,15 @@ metadata:
   name: nginx-ingress
   namespace: argocd
   finalizers:
-    - resources-finalizers.argocd.proj.io
+  - resources-finalizers.argocd.proj.io
 spec:
   project: default
   destination:
     namespace: nginx-ingress
-    server: 'https://kubernetes.default.svc'
+    server: https://kubernetes.default.svc
   source:
     path: nginx-ingress-controller
-    repoUrl: 'https://charts.bitnami.com/bitnami'
+    repoUrl: https://charts.bitnami.com/bitnami
     targetRevision: 9.3.18
     chart: nginx-ingress-controller
   syncPolicy:
