@@ -20,7 +20,7 @@ spec:
     helm:
       fileParameters:
       - config
-        prometheus-values.yaml
+        files/prometheus-values.yaml
   syncPolicy: 
     automated: 
       prune: true
