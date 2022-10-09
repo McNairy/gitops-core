@@ -19,7 +19,7 @@ spec:
     targetRevision: 15.15.0
     helm:
       valueFiles:
-        - prometheus-values.yaml
+      - prometheus-values.yaml
   syncPolicy: 
     automated: 
       prune: true
