@@ -18,9 +18,8 @@ spec:
     repoURL: 'https://prometheus-community.github.io/helm-charts'
     targetRevision: 15.15.0
     helm:
-      fileParameters:
-      - name: prometheus-config-values
-        path: prometheus-values.yaml
+      valueFiles:
+      - prometheus-values.yaml
   syncPolicy: 
     automated: 
       prune: true
