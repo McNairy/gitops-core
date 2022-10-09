@@ -26,7 +26,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: argocd-server-http-ingress
-  namespace: argocd
+  namespace: nginx-ingress
   annotations:
     kubernetes.io/tls-acme: "true"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
