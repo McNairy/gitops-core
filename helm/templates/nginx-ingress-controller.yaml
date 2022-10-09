@@ -11,6 +11,7 @@ spec:
     namespace: nginx-ingress
     server: 'https://kubernetes.default.svc'
   source:
+    path: nginx-ingress-controller
     repoUrl: 'https://charts.bitnami.com/bitnami'
     targetRevision: 9.3.18
     chart: nginx-ingress-controller
