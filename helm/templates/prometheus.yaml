@@ -18,8 +18,9 @@ spec:
     helm:
       values: |
         server:
-          ingress:
-            enabled: true
+          global:
+            scrape_interval: 5s
+            evaluation_interval: 5s
   syncPolicy: 
     automated: 
       prune: true
