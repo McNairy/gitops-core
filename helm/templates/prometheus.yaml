@@ -24,6 +24,7 @@ spec:
             annotations:
               kubernetes.io/ingress.class: nginx
               kubernetes.io/tls-acme: 'true'
+              cert-manager.io/cluster-issuer: letsencrypt-staging
             hosts:
               - prometheus.mcnairy-manor.home
             extraPaths:
