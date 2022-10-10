@@ -10,7 +10,7 @@ spec:
   tls:
   - hosts:
     - prometheus.mcnairy-manor.home
-    secretName: letsencrypt-staging
+    secretName: prometheus-server-tls
   rules:
   - host: prometheus.mcnairy-manor.home
     http:
