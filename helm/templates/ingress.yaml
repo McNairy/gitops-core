@@ -1,7 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress-example
+  name: ingress-rules
+  namespace: argocd
 spec:
   ingressClassName: nginx
   rules:
@@ -18,10 +19,10 @@ spec:
   - host: prometheus.mcnairy-manor.home
     http:
       paths:
-        - path: /
-          pathType: Prefix
-          backend:
-            service:
-              name: prometheus-server
-              port:
-                number: 80
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: prometheus-server
+            port:
+              number: 80
