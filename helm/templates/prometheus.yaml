@@ -18,6 +18,8 @@ spec:
         global:
           scrape_interval: 5s
           evaluation_interval: 5s
+        service:
+          type: LoadBalancer
     repoURL: "https://prometheus-community.github.io/helm-charts"
     targetRevision: "15.15.0"
   syncPolicy: 
