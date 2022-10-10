@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - prometheus.mcnairy-manor.home
+    - prometheus.michaelmcnairy.com
     secretName: prometheus-server-tls
   rules:
-  - host: prometheus.mcnairy-manor.home
+  - host: prometheus.michaelmcnairy.com
     http:
       paths:
       - path: /
