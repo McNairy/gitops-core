@@ -10,7 +10,7 @@ spec:
   tls:
   - hosts:
     - prometheus.michaelmcnairy.com
-      secretName: prometheus-server-tls
+    secretName: prometheus-server-tls
   rules:
   - host: prometheus.michaelmcnairy.com
     http:
