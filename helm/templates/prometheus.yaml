@@ -17,10 +17,9 @@ spec:
     targetRevision: "15.15.0"
     helm:
       values: |
-        server:
-          global:
-            scrape_interval: 5s
-            evaluation_interval: 5s
+        global:
+          scrape_interval: 5s
+          evaluation_interval: 5s
   syncPolicy: 
     automated: 
       prune: true
