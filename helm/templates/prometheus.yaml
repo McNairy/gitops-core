@@ -27,6 +27,7 @@ spec:
             hosts:
               - prometheus.mcnairy-manor.home
             extraPaths:
+            - paths: /*
               backend:
                 serviceName: ssl-redirect
                 servicePort: use-annotation
