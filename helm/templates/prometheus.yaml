@@ -21,8 +21,19 @@ spec:
             evaluation_interval: 5s
           ingress:
             enabled: true
+            annotations:
+              kubernetes.io/ingress.class: nginx
+              kubernetes.io/tls-acme: 'true'
             hosts:
               - prometheus.mcnairy-manor.home
+            extraPaths:
+              backend:
+                serviceName: ssl-redirect
+                servicePort: use-annotation
+            tls:
+              - secretName: prometheus-server-tls
+                hosts:
+                  - prometheus.mcnairy-manor.home
     repoURL: "https://prometheus-community.github.io/helm-charts"
     targetRevision: "15.15.0"
   syncPolicy: 
