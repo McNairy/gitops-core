@@ -17,8 +17,9 @@ spec:
     targetRevision: "2.4.4"
     helm:
       values: |
-        service:
-          type: LoadBalancer
+        loki:
+          service:
+            type: LoadBalancer
   syncPolicy: 
     automated: 
       prune: true
