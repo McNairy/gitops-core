@@ -15,6 +15,11 @@ spec:
     chart: prometheus
     repoURL: "https://prometheus-community.github.io/helm-charts"
     targetRevision: "15.15.0"
+    helm:
+      values: |
+        server:
+          ingress:
+            enabled: true
   syncPolicy: 
     automated: 
       prune: true
