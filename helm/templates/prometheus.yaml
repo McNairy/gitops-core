@@ -22,8 +22,8 @@ spec:
             evaluation_interval: 5s
             scrape_interval: 5s
             scrape_timeout: 5s
-         nodeExporter:
-           enabled: true
+          nodeExporter:
+            enabled: true
         serverFiles:
           prometheus.yaml:
             scrape_configs:
