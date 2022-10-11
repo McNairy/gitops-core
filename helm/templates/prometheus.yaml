@@ -21,17 +21,17 @@ spec:
           global:
             evaluation_interval: 5s
             scrape_interval: 5s
-            scrape_timeout: 5s
-        # nodeExporter:
-        #   enabled: true
-        # serverFiles:
-        #   prometheus.yaml:
-        #     scrape_configs:
-        #       - job_name: node-exporter
-        #         static_configs:
-        #           - targets:
-        #             - 192.168.1.41:9090
-        #             - 192.168.1.7:9090
+            scrapte_timeout: 5s
+         nodeExporter:
+           enabled: true
+        serverFiles:
+          prometheus.yaml:
+            scrape_configs:
+              - job_name: node-exporter
+                static_configs:
+                  - targets:
+                    - 192.168.1.41:9090
+                    - 192.168.1.7:9090
   syncPolicy:
     automated:
       prune: true
