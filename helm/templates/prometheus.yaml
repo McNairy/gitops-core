@@ -20,7 +20,7 @@ spec:
         server:
           global:
             scrape_interval: 5s
-            evaluation_interval: 5s
+            evaluation_interval: 6s
   syncPolicy: 
     automated: 
       prune: true
