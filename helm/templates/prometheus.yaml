@@ -1,17 +1,17 @@
---- 
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
-metadata: 
-  finalizers: 
+metadata:
+  finalizers:
     - resources-finalizer.argocd.argoproj.io
   name: prometheus
   namespace: argocd
-spec: 
-  destination: 
+spec:
+  destination:
     namespace: monitoring
     server: "https://kubernetes.default.svc"
   project: default
-  source: 
+  source:
     chart: prometheus
     repoURL: "https://prometheus-community.github.io/helm-charts"
     targetRevision: "15.15.0"
@@ -21,18 +21,17 @@ spec:
           global:
             scrape_interval: 5s
             evaluation_interval: 5s
-        nodeExporter:
-          enabled: true
-        serverFiles:
-          prometheus.yaml:
-            scrape_configs:
-              - job_name: node-exporter
-                static_configs:
-                  - targets:
-                    - 192.168.1.41:9090
-                    - 192.168.1.7:9090
-  syncPolicy: 
-    automated: 
+        # nodeExporter:
+        #   enabled: true
+        # serverFiles:
+        #   prometheus.yaml:
+        #     scrape_configs:
+        #       - job_name: node-exporter
+        #         static_configs:
+        #           - targets:
+        #             - 192.168.1.41:9090
+        #             - 192.168.1.7:9090
+  syncPolicy:
+    automated:
       prune: true
       selfHeal: true
-
