@@ -19,8 +19,9 @@ spec:
       values: |
         server:
           global:
-            scrape_interval: 5s
             evaluation_interval: 5s
+            scrape_interval: 5s
+            scrape_timeout: 10s
         # nodeExporter:
         #   enabled: true
         # serverFiles:
