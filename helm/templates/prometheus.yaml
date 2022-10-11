@@ -22,14 +22,15 @@ spec:
             evaluation_interval: 5s
             scrape_interval: 5s
             scrape_timeout: 5s
-        alertmanager.yml:
-          receivers:
-          - name: slack_receiver
-            slack_configs:
-            - send_resolved: true
-              username: 'michaelmcnairy'
-              api_url: 'https://hooks.slack.com/services/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'
-              channel: '#alerts' 
+        alertmanagerFiles:
+          alertmanager.yml:
+            receivers:
+            - name: slack_receiver
+              slack_configs:
+              - send_resolved: true
+                username: 'michaelmcnairy'
+                api_url: 'https://hooks.slack.com/services/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'
+                channel: '#alerts' 
   syncPolicy:
     automated:
       prune: true
