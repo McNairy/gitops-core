@@ -21,13 +21,6 @@ spec:
     chart: argo-events
     repoURL: "https://argoproj.github.io/argo-helm"
     targetRevision: "2.0.6"
-    helm:
-      values: |
-        ingress:
-          enabled: true
-          ingressClassName: nginx
-          hosts:
-          - argo-workflows.michaelmcnairy.com
   syncPolicy: 
     automated: 
       prune: true
