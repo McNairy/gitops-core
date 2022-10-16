@@ -23,7 +23,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: argo-workflows
+            name: argo-workflows-server
             port:
               number: 2746
 # Ingress rule for prometheus is in the helm.values section of the prometheus template
