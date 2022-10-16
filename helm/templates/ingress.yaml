@@ -25,5 +25,5 @@ spec:
           service:
             name: argo-workflows-server
             port:
-              number: 80
+              number: 2746
 # Ingress rule for prometheus is in the helm.values section of the prometheus template
