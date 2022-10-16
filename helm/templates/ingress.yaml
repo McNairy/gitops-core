@@ -16,7 +16,7 @@ spec:
             name: nginx-deploy-main
             port: 
               number: 80
-  - host: argo-workflows.mcnairy-manor.home
+  - host: argo-workflows.michaelmcnairy.com
     http:
       paths:
       - path: /
