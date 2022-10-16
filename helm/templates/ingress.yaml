@@ -16,4 +16,14 @@ spec:
             name: nginx-deploy-main
             port: 
               number: 80
+  - host: argo-workflows.mcnairy-manor.home
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: argo-workflows
+            port:
+              number: 2746
 # Ingress rule for prometheus is in the helm.values section of the prometheus template
