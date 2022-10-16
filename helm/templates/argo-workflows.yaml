@@ -10,7 +10,7 @@ kind: Application
 metadata: 
   finalizers: 
     - resources-finalizer.argocd.argoproj.io
-  name: argo-events
+  name: argo-workflows
   namespace: argocd
 spec: 
   destination: 
