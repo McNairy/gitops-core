@@ -26,8 +26,22 @@ spec:
         ingress:
           enabled: true
           ingressClassName: nginx
+          annotations:
+            cert-manager.io/cluster-issuer: letsencrypt-staging
           hosts:
           - argo-workflows.michaelmcnairy.com
+          extraPaths:
+            - path: /*
+              pathType: Prefix
+              backend:
+                service:
+                  name: ssl-redirect
+                  port:
+                    name: use-annotation
+          tls:
+            - secretName: letsencrypt-staging
+              hosts:
+                argo-workflows.michaelmcnairy.com
   syncPolicy: 
     automated: 
       prune: true
